@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
@@ -25,15 +24,8 @@
 </head>
 
 <body
-	style=        "font-family: 'Barlow Condensed', sans-serif;
-
-    font-family: 'Dancing Script', cursive;
-
-    font-family: 'Dosis', sans-serif;
-
-    font-family: 'Edu TAS Beginner', cursive;
-
-    font-family: 'Roboto Slab', serif;">
+	style=  "font-family: 'Barlow Condensed', sans-serif;  font-family: 'Dancing Script', cursive;  font-family: 'Dosis', sans-serif;
+    font-family: 'Edu TAS Beginner', cursive;  font-family: 'Roboto Slab', serif;">
 
 	<div
 		class="container d-flex justify-content-center align-items-center vh-100">
@@ -90,25 +82,44 @@
 
 						<form action="criar-usuario" method="post">
 							<div class="mb-3">
-								<label for="nome" class="form-label"> Nome: </label> <input
-									type="text" name="nome" class="form-control" id="nome" required />
+								<label for="nome" class="form-label"> Nome: </label> 
+								<input
+									type="text"
+									 name="nome"
+									 class="form-control" 
+									 id="nome" 
+									 pattern="[A-Za-zÀ-Üà=ü\s].{8,150}"
+									 title="Por favor, infome um nome válido de 8 a 150 caracteres."
+									 required/>
 							</div>
 							<div class="mb-3">
-								<label for="email" class="form-label"> E-mail: </label> <input
-									type="email" name="email" class="form-control" id="email"
-									required />
+								<label for="email" class="form-label"> E-mail: </label> 
+								<input
+									type="email" 
+									name="email" 
+									class="form-control" 
+									id="email" 
+									required/>
 							</div>
 							<div class="mb-3">
 								<label for="password" class="form-label"> Senha: </label>
 								<div class="mb-3 input-group">
-									<input type="password" class="input form-control" name="senha"
-										id="password" required aria-label="password"
-										aria-describedby="basic-addon1" />
+									<input 
+										type="password" 
+										class="input form-control" 
+										name="senha"
+										id="password"  
+										aria-label="password"
+										aria-describedby="basic-addon1"
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}"
+										title="A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial. Além disso, deve te de 8 a 16 caracteres."
+										required
+										 />
 									<div class="input-group-append">
 										<span class="input-group-text" style="height: 40px;"
-											onclick="password_show_hide();"> <i class="fas fa-eye"
-											id="show_eye"></i> <i class="fas fa-eye-slash d-none"
-											id="hide_eye"></i>
+											onclick="password_show_hide();"> 
+											<i class="fas fa-eye" id="show_eye"></i>
+											 <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
 										</span>
 									</div>
 								</div>
@@ -117,9 +128,13 @@
 								<label for="password" class="form-label"> Confirmar
 									senha: </label>
 								<div class="mb-3 input-group">
-									<input type="password" name="corfirm-senha"
-										class="input form-control" id="comfirm-password" required
-										aria-label="password" aria-describedby="basic-addon1" />
+									<input 
+										type="password" 
+										name="corfirm-senha"
+										class="input form-control" 
+										id="comfirm-password" 
+										aria-label="password" 
+										aria-describedby="basic-addon1" />
 									<div class="input-group-append">
 										<span class="input-group-text" style="height: 40px;"
 											onclick="confirm_password_show_hide();"> <i
