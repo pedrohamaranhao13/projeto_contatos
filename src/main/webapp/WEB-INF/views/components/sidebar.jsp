@@ -28,8 +28,8 @@
 					<a href="#"
 						class="d-flex align-items-center text-white text-decoration-none dropdown-toggle btn btn-dark"
 						id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-						<img src="https://github.com/mdo.png" alt="hugenerd" width="30"
-						height="30" class="rounded-circle"> <span
+						<img src="../resources/img/perfil.jpg" alt="hugenerd" width="30"
+						height="30" class="rounded-circle" / > <span
 						class="d-none d-sm-inline mx-1"><strong>${usuario.nome}</strong></span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-dark text-small shadow"

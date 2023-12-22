@@ -15,7 +15,7 @@ public class ContatoRepository {
 		
 		Connection connection = ConnectionFactory.getConnection();
 		
-		PreparedStatement statement = connection.prepareStatement("insert into conato(nome, telefone, email, observacoes, idusuario) values(?,?,?,?,?)");
+		PreparedStatement statement = connection.prepareStatement("insert into contato(nome, telefone, email, observacoes, idusuario) values(?,?,?,?,?)");
 		statement.setString(1, contato.getNome());
 		statement.setString(2, contato.getTelefone());
 		statement.setString(3, contato.getEmail());

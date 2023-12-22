@@ -44,7 +44,7 @@
 								</h5>
 								<p class="card-text">Clique aqui para cadastrar novos
 									contatos.</p>
-								<a href="#" class="btn btn-primary">Acessar</a>
+								<a href="../admin/cadastro-contatos" class="btn btn-primary">Acessar</a>
 							</div>
 						</div>
 					</div>
@@ -56,7 +56,7 @@
 								</h5>
 								<p class="card-text">Clique aqui para consultar cadastros já
 									cadastrados.</p>
-								<a href="#" class="btn btn-primary">Acessar</a>
+								<a href="../admin/consulta-contatos" class="btn btn-primary">Acessar</a>
 							</div>
 						</div>
 					</div>
