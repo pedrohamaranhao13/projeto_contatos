@@ -25,6 +25,9 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+TAS+Beginner&display=swap"
 	rel="stylesheet" />
+	
+<link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+	
 </head>
 <body
 	style="font-family: 'Barlow Condensed', sans-serif; font-family: 'Dancing Script', cursive; font-family: 'Dosis', sans-serif; font-family: 'Edu TAS Beginner', cursive; font-family: 'Roboto Slab', serif;">
@@ -38,13 +41,70 @@
 					<h5>Consulta de contatos</h5>
 					<p> Listagem de contatos cadastrados em sua agenda: </p>
 					<hr/>
+					
+					<div class="table-reponsive">
+					
+					<%@ page import=" br.com.smarttec.entites.Contato" %>
+					<%@ page import=" java.util.List" %>
+					<%
+						List<Contato> contatos = (List<Contato>) request.getAttribute("contatos");
+					%>
+						
+						<table id="tabela-contatos" class="table table-sm">
+							<thead>
+								<tr>
+									<th> Nome do contato </th>
+									<th> Telefone</th>
+									<th> E-mail </th>
+									<th> Observações </th>
+									<th>Operações</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+								<% for(Contato contato : contatos) { %>
+							
+								<tr>
+									<td><%= contato.getNome() %></td>
+									<td><%= contato.getTelefone() %></td>
+									<td><%= contato.getEmail() %></td>
+									<td><%= contato.getObservacoes() %></td>
+									<td>
+										<a href="#" class="btn btn-outline-primary btn-sm">
+											Editar
+										</a>
+										<a href="#" class="btn btn-outline-danger btn-sm">
+											Excluir
+										</a>
+									</td>
+								</tr>	
+								
+								<% } %>							
+							</tbody>	
+						</table>
+					
+					</div>
+					
 			</div>
 		</div>
 	</div>
+	
+	
 
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-		crossorigin="anonymous"></script>
+	<script	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>	
+	<script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#tabela-contatos").DataTable({
+				language: {
+					url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/pt-BR.json',
+				},
+	            "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"] ], 
+	            "pageLength": 5
+			});
+		});
+	</script>
+		
 </body>
 </html>
