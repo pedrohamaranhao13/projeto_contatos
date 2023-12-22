@@ -30,7 +30,7 @@ public class ContatoRepository {
 		
 		Connection connection = ConnectionFactory.getConnection();
 		
-		PreparedStatement statement = connection.prepareStatement("update conatonome=?, telefone=?, email=?, observacoes=?  where idcontato =? ");
+		PreparedStatement statement = connection.prepareStatement("update contato nome=?, telefone=?, email=?, observacoes=?  where idcontato =? ");
 		statement.setString(1, contato.getNome());
 		statement.setString(2, contato.getTelefone());
 		statement.setString(3, contato.getEmail());
@@ -45,7 +45,7 @@ public class ContatoRepository {
 		
 		Connection connection = ConnectionFactory.getConnection();
 		
-		PreparedStatement statement = connection.prepareStatement("delete from conato  where idcontato =?");
+		PreparedStatement statement = connection.prepareStatement("delete from contato  where idcontato =?");
 		statement.setInt(1, contato.getIdContato());
 		statement.execute();
 		
