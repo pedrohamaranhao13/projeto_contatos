@@ -109,8 +109,9 @@
 									<td><%= contato.getEmail() %></td>
 									<td><%= contato.getObservacoes() %></td>
 									<td>
-										<a href="/agenda_contatos/admin/edicao-contatos" class="btn btn-outline-primary btn-sm">
-											Editar
+										<a 	href="/agenda_contatos/admin/edicao-contatos?id=<%=contato.getIdContato() %>" 
+												class="btn btn-outline-primary btn-sm">
+													Editar
 										</a>
 										<a 	href="/agenda_contatos/admin/exclusao-contatos?id=<%= contato.getIdContato() %>" 
 												onclick="return confirm('Deseja realmente excluir o contato selecionado?')"
