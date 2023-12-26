@@ -13,10 +13,8 @@ import br.com.smarttec.repositories.UsuarioRepository;
 @Controller
 public class LoginController {
 
-	@RequestMapping(value = "/") // raiz do projeto
+	@RequestMapping(value = "/") 
 	public ModelAndView login() {
-		// definindo a página que será aberta no navegador:
-		// WEB-INF/views/login.jsp
 		ModelAndView modelAndView = new ModelAndView("login");
 		return modelAndView;
 	}

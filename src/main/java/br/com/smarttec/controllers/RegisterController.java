@@ -13,9 +13,9 @@ import br.com.smarttec.repositories.UsuarioRepository;
 @Controller
 public class RegisterController {
 
-	@RequestMapping(value = "/esqueci-minha-senha")
-	public ModelAndView password() {
-		ModelAndView modelAndView = new ModelAndView("password");
+	@RequestMapping(value = "criar-conta")
+	public ModelAndView register() {
+		ModelAndView modelAndView = new ModelAndView("register");
 		return modelAndView;
 	}
 	
