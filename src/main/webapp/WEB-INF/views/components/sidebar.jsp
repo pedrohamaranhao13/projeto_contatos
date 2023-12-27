@@ -35,7 +35,7 @@
 					<ul class="dropdown-menu dropdown-menu-dark text-small shadow"
 						aria-labelledby="dropdownUser1">
 						<li><a class="dropdown-item " href="#">Perfil</a></li>
-						<li><a class="dropdown-item" href="#">Configurações</a></li>
+						<li><a class="dropdown-item" href="../admin/dados-usuario">Configurações</a></li>
 						<li>
 							<hr class="dropdown-divider">
 						</li>

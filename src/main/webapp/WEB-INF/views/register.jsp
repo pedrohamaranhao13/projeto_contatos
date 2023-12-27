@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="./resources/img/heartbeat.ico"
 	type="image/x-icon" />
@@ -76,7 +76,7 @@
 							</div>
 						</c:if>
 
-						<form action="criar-usuario" method="post">
+						<form action="criar-usuario" method="post" onsubmit="return validarSenhas()">
 							<div class="mb-3">
 								<label for="nome" class="form-label"> Nome: </label> 
 								<input
@@ -84,8 +84,8 @@
 									 name="nome"
 									 class="form-control" 
 									 id="nome" 
-									 pattern="[A-Za-zÀ-Üà=ü\s].{8,150}"
-									 title="Por favor, infome um nome válido de 8 a 150 caracteres."
+									 pattern="[A-Za-zÃ€-ÃœÃ =Ã¼\s].{8,150}"
+									 title="Por favor, infome um nome vÃ¡lido de 8 a 150 caracteres."
 									 required/>
 							</div>
 							<div class="mb-3">
@@ -108,7 +108,7 @@
 										aria-label="password"
 										aria-describedby="basic-addon1"
 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}"
-										title="A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial. Além disso, deve te de 8 a 16 caracteres."
+										title="A senha deve conter pelo menos uma letra maiÃºscula, uma letra minÃºscula, um nÃºmero e um caractere especial. AlÃ©m disso, deve te de 8 a 16 caracteres."
 										required
 										 />
 									<div class="input-group-append">
@@ -156,7 +156,6 @@
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="resources/js/register.js"></script>
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<!-- JQuery Validate JS -->
@@ -166,6 +165,9 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_pt_BR.min.js"></script>
+	<script src="resources/js/register.js"></script>
+	<script src="resources/js/validar-senhas.js"></script>
+		
 </body>
 </html>
-tml>
+

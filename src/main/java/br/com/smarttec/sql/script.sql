@@ -14,3 +14,6 @@ create table contato(
 	idusuario		integer				not null,
 	foreign key(idusuario) references usuario(idusuario)
 );
+
+
+ALTER TABLE usuario ADD COLUMN foto_perfil BYTEA;

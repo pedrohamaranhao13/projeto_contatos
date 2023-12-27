@@ -20,4 +20,5 @@ public class Usuario {
 	private String email;
 	private String senha;
 	private List<Contato> contatos;
+	private byte[] fotoPerfil;
 }
